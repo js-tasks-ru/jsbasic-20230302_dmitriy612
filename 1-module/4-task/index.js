@@ -1,3 +1,10 @@
 function checkSpam(str) {
-  // ваш код...
+  const spamWords = ["1xBet", "XXX"];
+  const strInLowerCase = str.toLowerCase();
+  for (let spamWord of spamWords) {
+    if (strInLowerCase.includes(spamWord.toLowerCase())) {
+      return true;
+    }
+  }
+  return false;
 }
